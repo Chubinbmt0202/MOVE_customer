@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Text, View, TouchableOpacity } from "react-native";
 import styles from "./Onboard2Style";
 
-export default function OnBoard2() {
+export default function OnBoard2({navigation}) {
   return (
     <>
       <View style={styles.container}>
@@ -24,6 +24,7 @@ export default function OnBoard2() {
 
             <View style={styles.btnContainer}>
               <TouchableOpacity
+                onPress={() => navigation.navigate('HomePage')}
                 activeOpacity={0.8}
                 style={styles.btnTextContainer}
               >

@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Splash from "./src/Page/Splash/Splash";
 import OnBoard1 from "./src/Page/OnBoard/Onboard1";
 import OnBoard2 from "./src/Page/OnBoard/Onboard2";
+import HomePage from "./src/Page/Home/Home";
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,7 @@ export default function App() {
         <Stack.Screen name="Slpash" component={Splash}   />
         <Stack.Screen name="OnBoard1" component={OnBoard1} />
         <Stack.Screen name="OnBoard2" component={OnBoard2} />
+        <Stack.Screen name="HomePage" component={HomePage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
