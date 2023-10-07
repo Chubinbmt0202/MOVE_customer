@@ -1,21 +1,18 @@
 import React from "react";
 import { Button, Text, View, TouchableOpacity } from "react-native";
-import styles from "./Onboard1Style";
+import styles from "./Onboard2Style";
 
-export default function OnBoard1({ navigation }) {
+export default function OnBoard2() {
   return (
     <>
-      {" "}
       <View style={styles.container}>
         <TouchableOpacity style={styles.skipContainer}>
           <Text style={styles.skipText}>Skip</Text>
         </TouchableOpacity>
         <View style={styles.logoContainer}>
-          <Text style={styles.boardTitle}>
-            F7 cho phép đặt sửa bất kì đâu bất kì nơi nào.
-          </Text>
+          <Text style={styles.boardTitle}>Hỗ trợ 24/7 chỉ với 1 cú chạm</Text>
           <Text style={styles.boardSlogan}>
-            Luôn đứng đầu về dịch vụ cứu hộ sửa chữa xe, đa dạng dịch vụ về xe.
+            Yêu cầu cứu hộ với ngón tay của bạn
           </Text>
         </View>
         <View style={styles.bottomContainer}>
@@ -27,7 +24,6 @@ export default function OnBoard1({ navigation }) {
 
             <View style={styles.btnContainer}>
               <TouchableOpacity
-                onPress={() => navigation.navigate("OnBoard2")}
                 activeOpacity={0.8}
                 style={styles.btnTextContainer}
               >
