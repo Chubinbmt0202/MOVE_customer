@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, ScrollView } from 'react-native';
 import { FontAwesome, EvilIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import BottomNavigationBar from '../../Component/Navigation/Navigation';
 
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -23,8 +24,8 @@ export default function HomePage({navigation}) {
                 showsHorizontalScrollIndicator={false}
                 style={styles.serviceContainer}
             >
-
             </ScrollView>
+            <BottomNavigationBar navigation={navigation} />
         </View>
     );
 };

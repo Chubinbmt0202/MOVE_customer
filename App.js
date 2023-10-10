@@ -1,35 +1,24 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Splash from "./src/Page/Splash/Splash";
-import OnBoard1 from "./src/Page/OnBoard/Onboard1";
-import OnBoard2 from "./src/Page/OnBoard/Onboard2";
+import { NavigationContainer } from '@react-navigation/native';
+// page
+import Splash from "./src/Page/Introduce/Splash";
 import HomePage from "./src/Page/Home/Home";
-import MainContainer from "./src/Page/MainContainer";
+import MyService from "./src/Page/MyService/MyService";
+import Help from "./src/Page/Help/Help";
 
 const Stack = createStackNavigator();
 
 export default function App() {
-  const forFade = ({ current }) => ({
-    cardStyle: {
-        opacity: 0,
-    },
-});
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{ 
-          headerShown: false
-         }}
-        initialRouteName="Slpash"
-      >
-        <Stack.Screen name="Slpash" component={Splash}   />
-        <Stack.Screen name="OnBoard1" component={OnBoard1} />
-        <Stack.Screen name="OnBoard2" component={OnBoard2} />
-        <Stack.Screen name="MainContainer" component={MainContainer} />
+      <Stack.Navigator  screenOptions={{ headerShown: false }} initialRouteName="Splash">
+        <Stack.Screen
+         name="Splash" component={Splash} />
+        <Stack.Screen name="HomePage" component={HomePage} />
+        <Stack.Screen name="MyService" component={MyService} />
+        <Stack.Screen name="Help" component={Help} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
