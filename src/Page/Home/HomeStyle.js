@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
     searchInput: {
         flex: 1,
         marginLeft: 5,
-        outlineStyle: 'none',
     },
 });
 
