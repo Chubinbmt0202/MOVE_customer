@@ -5,8 +5,8 @@ import { Text } from "react-native";
 export default function Splash({navigation}) {
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate("Login");
-    }, 5000); 
+      navigation.navigate("HomePage");
+    }, 2000); 
   }, []);
 
   return (
