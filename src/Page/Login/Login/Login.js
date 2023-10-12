@@ -20,6 +20,9 @@ const Login = ({ navigation }) => {
     //     //     navigation.navigate('OtpVerify');
     //     // }, 20000);
     // };
+    const ChangePageLogin = () => {
+        navigation.navigate("Register")
+    }
 
     const sendVerification = () => {
         const phoneProvider = new firebase.auth.PhoneAuthProvider();
@@ -65,7 +68,7 @@ const Login = ({ navigation }) => {
                 <TouchableOpacity activeOpacity={0.8} style={styles.btnContinue} onPress={sendVerification}>
                     <Text style={styles.btnText}>Send Otp</Text>
                 </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.8} style={styles.btnRegister}>
+                <TouchableOpacity activeOpacity={0.8} style={styles.btnRegister} onPress={ChangePageLogin} >
                     <Text style={styles.btnText}>Register</Text>
                 </TouchableOpacity>
             </View>
