@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, TouchableOpacity, Alert, TextInput } from 'react-native';
-import styles from '../Login/LoginStyle';
+import styles from './LoginStyle';
 import { FirebaseRecaptchaVerifierModal } from 'expo-firebase-recaptcha';
 import { firebaseConfig } from '/CODE/Bài tập/MOVE/move_customer/src/Config/Firebase';
 import firebase from 'firebase/compat/app';
@@ -11,15 +11,6 @@ const Login = ({ navigation }) => {
     const [verificationId, setVerificationId] = useState(null);
     const recaptchaVerifier = useRef(null);
 
-    // const sendVerification = () => {
-    //     const phoneProvider = new firebase.auth.PhoneAuthProvider();
-    //     phoneProvider.verifyPhoneNumber(phoneNumber, recaptchaVerifier.current).then(setVerificationId);
-    //     setPhoneNumber('');
-
-    //     // setTimeout(() => {
-    //     //     navigation.navigate('OtpVerify');
-    //     // }, 20000);
-    // };
     const ChangePageLogin = () => {
         navigation.navigate("Register")
     }
@@ -37,19 +28,6 @@ const Login = ({ navigation }) => {
             });
     };
 
-    // const confirmCode = () => {
-    //     const credential = firebase.auth.PhoneAuthProvider.credential(verificationId, code);
-    //     firebase
-    //         .auth()
-    //         .signInWithCredential(credential)
-    //         .then(() => {
-    //             setCode('');
-    //         })
-    //         .catch((error) => {
-    //             alert(error);
-    //         });
-    //     Alert.alert('ok');
-    // };
     return (
         <View style={styles.loginContainer}>
             <FirebaseRecaptchaVerifierModal ref={recaptchaVerifier} firebaseConfig={firebaseConfig} />
